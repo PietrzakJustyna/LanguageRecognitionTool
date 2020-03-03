@@ -1,25 +1,28 @@
-from tensorflow.keras.models import Sequential
+import tensorflow.keras.models as models
 from tensorflow.keras.layers import Dense, Dropout
 from preparation_functions import convert_dic_to_vector
 from config import max_letters, language_tags
 import numpy as np
 
-network = Sequential()
+
+network = models.Sequential()
 network.add(Dense(200, input_dim=26*max_letters, activation='sigmoid'))
 network.add(Dense(150, activation='sigmoid'))
+network.add(Dense(100, activation='sigmoid'))
 network.add(Dropout(0.15))
-network.add(Dense(100, activation='sigmoid'))
-network.add(Dense(100, activation='sigmoid'))
+network.add(Dense(75, activation='sigmoid'))
 network.add(Dense(len(language_tags), activation='softmax'))
-network.load_weights('my_model_weights.hdf5')
-network.compile(loss='binary_crossentropy', optimizer='sgd', metrics=['accuracy'])
+
+network.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+network.load_weights('weights2.h5')
+data = np.load('arr.npy')
 
 
 while True:
     dic = []
     valid = False
     while not valid:
-        word = input('Enter word to predict (maximum 12 characters):\n')
+        word = input('Enter word to predict (maximum 10 characters, do not use special characters):\n')
         if len(word) <= max_letters:
             word = word.lower()
             valid = True

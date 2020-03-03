@@ -32,14 +32,14 @@ network.add(Dense(len(language_tags), activation='softmax'))
 
 network.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-checkpoint_path = "training_1/cp.ckpt"
+checkpoint_path = "weights.h5"
 checkpoint_dir = os.path.dirname(checkpoint_path)
 
-checkpoint = ModelCheckpoint(filepath=checkpoint_path, monitor='val_acc', verbose=1, mode='max',
+checkpoint = ModelCheckpoint(filepath=checkpoint_path, monitor='val_accuracy', verbose=1, mode='max',
                              save_weights_only=True)
 # tboard = TensorBoard(log_dir='./logs', write_graph=True, write_images=True)
 # callbacks_list = [checkpoint, tboard]
 
-network.fit(x_train, y_train, epochs=10, batch_size=1000, validation_data=(x_test, y_test), callbacks=[checkpoint])
+network.fit(x_train, y_train, epochs=150, batch_size=1000, validation_data=(x_test, y_test), callbacks=[checkpoint])
 
-network.summary()
+network.save_weights('weights2.h5')
