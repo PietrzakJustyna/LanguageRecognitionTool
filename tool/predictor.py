@@ -1,5 +1,5 @@
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
+from tensorflow.keras.layers import Dense, Dropout
 from preparation_functions import convert_dic_to_vector
 from config import max_letters, language_tags
 import numpy as np
@@ -7,6 +7,7 @@ import numpy as np
 network = Sequential()
 network.add(Dense(200, input_dim=26*max_letters, activation='sigmoid'))
 network.add(Dense(150, activation='sigmoid'))
+network.add(Dropout(0.15))
 network.add(Dense(100, activation='sigmoid'))
 network.add(Dense(100, activation='sigmoid'))
 network.add(Dense(len(language_tags), activation='softmax'))

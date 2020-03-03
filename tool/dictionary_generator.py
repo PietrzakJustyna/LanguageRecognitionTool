@@ -32,7 +32,6 @@ for i in range(len(word_data)):
         entry.append(float(digit))
     arr.append(entry)
 
-
 arr = np.array(arr)
 np.save('arr.npy', arr)
 df = pd.DataFrame(arr)
