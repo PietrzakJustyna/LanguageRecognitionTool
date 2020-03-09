@@ -12,5 +12,6 @@ def index():
     if word is not None:
         result = p.predict(word)
     else:
-        result ="Nothing to predict yet"
+        result = "Nothing to predict yet"
     return render_template('index.html', result=result)
+

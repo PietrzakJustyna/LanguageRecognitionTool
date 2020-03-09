@@ -61,6 +61,5 @@ def predict(word):
     for i in range(len(language_tags)):
         lang = langs[i]
         score = prediction_vct[0][i]
-        result += lang + ': ' + str(round(100*score, 2)) + '%'
-        print('\n')
+        result += lang + ': ' + str(round(100*score, 2)) + '%' + '\n'
     return result
