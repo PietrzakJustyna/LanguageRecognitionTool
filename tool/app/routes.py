@@ -1,4 +1,4 @@
-from flask import render_template,request
+from flask import render_template, request
 
 from tool.app import app
 
@@ -14,4 +14,3 @@ def index():
     else:
         result = "Nothing to predict yet"
     return render_template('index.html', result=result)
-

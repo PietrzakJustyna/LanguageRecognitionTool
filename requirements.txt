@@ -46,3 +46,4 @@ urllib3==1.25.8
 Werkzeug==1.0.0
 Wikipedia-API==0.5.4
 wrapt==1.12.0
+gunicorn==20.0.4
