@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>English or Polish?</title>
+</head>
+<body>
+    <p>Hello!</p>
+    <p>Let our predictor decide if the word is in Polish or English</p>
+     <form action="/result" method="get">
+         <label for="word">Enter word to predict (maximum 10 characters, do not use any special characters):</label>
+         <br>
+         <input type="text" id="word" name="word">
+         <input type="submit" value="Submit">
+
+         <p>{{ result }}</p>
+    </form>
+</body>
+</html>

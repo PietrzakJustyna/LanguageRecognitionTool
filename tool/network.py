@@ -40,6 +40,5 @@ checkpoint = ModelCheckpoint(filepath=checkpoint_path, monitor='val_accuracy', v
 # tboard = TensorBoard(log_dir='./logs', write_graph=True, write_images=True)
 # callbacks_list = [checkpoint, tboard]
 
-network.fit(x_train, y_train, epochs=150, batch_size=1000, validation_data=(x_test, y_test), callbacks=[checkpoint])
+network.fit(x_train, y_train, epochs=200, batch_size=1000, validation_data=(x_test, y_test), callbacks=[checkpoint])
 
-network.save_weights('weights2.h5')

@@ -1,7 +1,7 @@
 import re
 import wikipediaapi as wiki
 from unidecode import unidecode
-import config
+import tool.config as config
 
 
 def generate_dictionary(tag, max_word_length):

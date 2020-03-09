@@ -1,5 +1,5 @@
 # Byte-compiled / optimized / DLL files
-__pycache__/
+tool/__pycache__/
 *.py[cod]
 *$py.class
 
@@ -130,3 +130,9 @@ dmypy.json
 
 # Idea files
 .idea
+
+# Generated files
+*.npy
+*git .csv
+
+tool/data.csv
