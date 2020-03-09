@@ -14,7 +14,7 @@ Following the https://medium.com/coinmonks/language-prediction-using-deep-neural
 </ul>
 
 <b>To play around with network</b>
-After installing all necessary requirements go to network.py. 
+After installing all necessary requirements go to tool/network.py. 
 
 <b>To play around with predictor</b>
-After installing all necessary requirements go to predictor.py. It already has weights loaded from the training. 
+After installing all necessary requirements run languagetool.py in flask.
