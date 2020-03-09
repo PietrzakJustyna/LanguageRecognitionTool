@@ -17,4 +17,5 @@ Following the https://medium.com/coinmonks/language-prediction-using-deep-neural
 After installing all necessary requirements go to tool/network.py. 
 
 <b>To play around with predictor</b>
-After installing all necessary requirements run languagetool.py in flask.
+Go to https://language-prediction.herokuapp.com/ 
+
