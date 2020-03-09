@@ -47,7 +47,7 @@ network.load_weights('tool/weights.h5')
 
 def predict(word):
     dic = []
-    dic.append(word.lower().strip())
+    dic.append(word.lower().replace(" ", ""))
     vct_str = convert_dic_to_vector(dic, max_letters)
     vct = np.zeros((1, 26 * max_letters))
     count = 0

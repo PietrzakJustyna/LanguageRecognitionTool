@@ -31,8 +31,8 @@ Released   : 20131220
                 <h2>Let our predictor decide if the word is in Polish or English</h2>
                 <form action="/result" method="get">
                     <div class="input-container">
-                        <input type="text" id="word" name="word">
-						<label>Enter word to predict (max. 10 characters, no special letters):</label>
+                        <input type="text" id="word" name="word" maxlength="10" value={{ word }} >
+						<label>Enter word to predict (max. 10 characters, no special letters)</label>
                     </div>
                     <input type="submit" value="Submit" class="button">
                 </form>

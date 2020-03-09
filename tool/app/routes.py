@@ -9,8 +9,8 @@ import tool.predictor as p
 @app.route('/result')
 def index():
     word = request.args.get('word')
-    if word is not None:
+    if word is not None and word.isalpha():
         result = p.predict(word)
     else:
-        result = "Nothing to predict yet"
-    return render_template('index.html', result=result)
+        result = "Nothing to predict yet. Please enter valid word to check"
+    return render_template('index.html', result=result, word=word)

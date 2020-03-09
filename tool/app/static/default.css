@@ -663,7 +663,6 @@ a:hover
 	margin-bottom:25px;
 }
 .input-container label{
-	position:absolute;
 	top:0px;
 	left:0px;
 	color:#fff;
@@ -683,10 +682,4 @@ a:hover
  border:none;
  outline:none;
  border-bottom:1px solid #e74c3c;
-}
-
-.input-container input:focus ~ label,
-.input-container input:focus ~ label{
-	top:-12px;
-	font-size:12px;
 }
