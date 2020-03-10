@@ -675,8 +675,9 @@ a:hover
   background:transparent;
   width:100%;
   padding:8px 0 5px 0;
-  font-size:16px;
+  font-size:1em;
   color:#fff;
+  text-align: center;
 }
 .input-container input:focus{
  border:none;
