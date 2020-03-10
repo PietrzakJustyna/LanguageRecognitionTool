@@ -2,6 +2,7 @@ import tensorflow.keras.models as models
 from tensorflow.keras.layers import Dense, Dropout
 from tool.preparation_functions import convert_dic_to_vector
 from tool.config import max_letters, language_tags
+from unidecode import unidecode
 import numpy as np
 
 network = models.Sequential()
@@ -47,6 +48,7 @@ network.load_weights('tool/weights.h5')
 
 def predict(word):
     dic = []
+    word = unidecode(word.lower().replace(" ", ""))
     dic.append(word.lower().replace(" ", ""))
     vct_str = convert_dic_to_vector(dic, max_letters)
     vct = np.zeros((1, 26 * max_letters))
